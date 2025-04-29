@@ -23,20 +23,5 @@ class Program
         {
             Console.WriteLine("X is 10");
         }
-
-        int j = 10000;
-
-        for(int i = j; i >= 0; i -= 20)
-        {
-            Console.WriteLine($"Bob is cool: {i}");
-        }
-
-        // This is a fun comment.
-
-        // This is a second comment
-
-
-
-
     }
 }
