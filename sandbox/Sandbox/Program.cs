@@ -23,5 +23,8 @@ class Program
         {
             Console.WriteLine("X is 10");
         }
+
+        Console.WriteLine("Hey how are you?");
+
     }
 }
