@@ -28,5 +28,7 @@ class Program
 
         Console.WriteLine("Hey betty how are you?");
 
+        Console.WriteLine("I am doing great.");
+
     }
 }
