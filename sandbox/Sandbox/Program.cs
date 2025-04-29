@@ -47,5 +47,7 @@ class Program
 
         // this is a test comment.
 
+        // this is a test comment.
+
     }
 }
