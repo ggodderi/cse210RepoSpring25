@@ -26,5 +26,7 @@ class Program
 
         Console.WriteLine("Hey how are you?");
 
+        Console.WriteLine("Hey betty how are you?");
+
     }
 }
