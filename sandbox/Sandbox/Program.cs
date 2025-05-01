@@ -18,17 +18,31 @@ class Program
         // string lastName = Console.ReadLine();
         // Console.WriteLine($"Your name is: {lastName}, {firstName} {lastName}");
 
-        int x = 10;
-        if (x == 10)
+        // int x = 10;
+        // if (x == 10)
+        // {
+        //     Console.WriteLine("X is 10");
+        // }
+
+        // Console.WriteLine("Hey how are you?");
+
+        // Console.WriteLine("Hey betty how are you?");
+
+        // Console.WriteLine("I am doing great.");
+
+        for(int i = 0; i < 20; i++)
         {
-            Console.WriteLine("X is 10");
+            Console.WriteLine($"Hello Bob {i}");
         }
 
-        Console.WriteLine("Hey how are you?");
-
-        Console.WriteLine("Hey betty how are you?");
-
-        Console.WriteLine("I am doing great.");
+        int x = 0;
+        int y = x++;
+        Console.WriteLine(y);
+        y = ++x;
+        Console.WriteLine(y);
+        x--;
+        Console.WriteLine($"{x++}");
+        Console.WriteLine(x);
 
     }
 }
