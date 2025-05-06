@@ -1,5 +1,7 @@
 using System;
 using System.Diagnostics.Tracing;
+using System.IO.Compression;
+
 
 class Circle
 {
@@ -7,10 +9,10 @@ class Circle
 
     public void SetRadius(double radius)
     {
-        if(radius < 0)
+        if (radius < 0)
         {
-            Console.WriteLine("Error");
-            return;
+            Console.WriteLine("Error, radius must > 0");
+            return; 
         }
         _radius = radius;
     }
@@ -26,26 +28,21 @@ class Circle
     }
 }
 
-
 class Program
 {
     static void Main(string[] args)
     {
 
         // Console.WriteLine("Bonjour tout le monde");
-    
+
         Circle myCircle = new Circle();
-        Circle myCircle2 = new Circle();
         myCircle.SetRadius(10);
-        // myCircle._radius = 10;
         Console.WriteLine($"{myCircle.GetRadius()}");
-
+        Circle myCircle2 = new Circle();
         myCircle2.SetRadius(20);
-        // myCircle._radius = 10;
         Console.WriteLine($"{myCircle2.GetRadius()}");
-        Console.WriteLine($"{myCircle.GetArea()}");
 
+        Console.WriteLine($"{myCircle.GetArea()}");
         Console.WriteLine($"{myCircle2.GetArea()}");
-  
     }
 }
