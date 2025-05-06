@@ -1,41 +1,51 @@
 using System;
- 
-class Program
+using System.Diagnostics.Tracing;
+
+class Circle
 {
-    static double AddNumbers(double a, double b)
+    private double _radius;
+
+    public void SetRadius(double radius)
     {
-        return a + b;
+        if(radius < 0)
+        {
+            Console.WriteLine("Error");
+            return;
+        }
+        _radius = radius;
     }
 
+    public double GetRadius()
+    {
+        return _radius;
+    }
+
+    public double GetArea()
+    {
+        return Math.PI * _radius * _radius;
+    }
+}
+
+
+class Program
+{
     static void Main(string[] args)
     {
-        // Console.WriteLine("Hello Sandbox World!");
-        // This is a test.
-        // This is a second change.
 
-        // Console.Write("Input your first name: ");
-        // string firstName = Console.ReadLine();
-        // Console.Write("Input your Last name: ");
-        // string lastName = Console.ReadLine();
-        // Console.WriteLine($"Your name is: {lastName}, {firstName} {lastName}");
+        // Console.WriteLine("Bonjour tout le monde");
+    
+        Circle myCircle = new Circle();
+        Circle myCircle2 = new Circle();
+        myCircle.SetRadius(10);
+        // myCircle._radius = 10;
+        Console.WriteLine($"{myCircle.GetRadius()}");
 
-        // int x = 10;
-        // if (x == 10)
-        // {
-        //     Console.WriteLine("X is 10");
-        // }
+        myCircle2.SetRadius(20);
+        // myCircle._radius = 10;
+        Console.WriteLine($"{myCircle2.GetRadius()}");
+        Console.WriteLine($"{myCircle.GetArea()}");
 
-        // Console.WriteLine("Hey how are you?");
-
-        // Console.WriteLine("Hey betty how are you?");
-
-        // Console.WriteLine("I am doing great.");
-
-        for(int i = 0; i < 20; i++)
-        {
-            Console.WriteLine($"Hello Bob {i}");
-        }
-
-    Console.WriteLine("");
+        Console.WriteLine($"{myCircle2.GetArea()}");
+  
     }
 }
