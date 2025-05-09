@@ -21,8 +21,8 @@ class Program
         Console.WriteLine($"{myCircle2.GetArea()}");
 
         Cylinder myCylinder = new Cylinder();
-        myCylinder.SetCircle(myCircle);
         myCylinder.SetHeight(10);
+        myCylinder.SetCircle(myCircle);
         Console.WriteLine($"{myCylinder.GetVolume()}");
     }
 }
