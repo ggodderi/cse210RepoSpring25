@@ -1,4 +1,6 @@
 
+using System.Security.Cryptography;
+
 class Cylinder
 {
     private Circle _circle;
@@ -13,8 +15,8 @@ class Cylinder
 
     public Cylinder(Circle circle)
     {
-        _height = 0.0;
         _circle = circle;
+        _height = 0.0;
     }
 
     public Cylinder(double height, Circle circle)
@@ -23,9 +25,15 @@ class Cylinder
         _circle = circle;
     }
 
-    public Cylinder(double height, double radius)
+    public Cylinder(double height)
     {
         _height = height;
+        _circle = null;
+    }
+
+    public Cylinder(double height, double radius)
+    {
+        _height = height; 
         _circle = new Circle(radius);
     }
 
