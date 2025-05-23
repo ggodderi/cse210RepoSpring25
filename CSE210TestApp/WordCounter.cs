@@ -1,17 +1,32 @@
 class WordCounter
 {
-    private List<string> _words;
+    private List<string>? _words;
 
-    public WordCounter()
+    private Dictionary<string, int>? _allWordCounts;
+
+    private void initalizeData()
     {
         _words = new List<string>();
+        _allWordCounts = new Dictionary<string, int>();
+    }
+    public WordCounter()
+    {
+        initalizeData();
     }
 
     public WordCounter(string sentence)
     {
-        _words = new List<string>();
+        initalizeData();
         SplitStringIntoWords(sentence);
     }
+
+    public WordCounter(string filename, int x)
+    {
+        initalizeData();
+        string fileData = File.ReadAllText(filename);
+        SplitStringIntoWords(fileData);
+    }
+
 
     private void SplitStringIntoWords(string text)
     {
@@ -34,5 +49,28 @@ class WordCounter
             }
         }
         return count;
+    }
+
+    public void CountAllWords()
+    {
+        foreach (string word in _words)
+        {
+            if (_allWordCounts.ContainsKey(word))
+            {
+                _allWordCounts[word]++;
+            }
+            else
+            {
+                _allWordCounts.Add(word, 1);
+            }
+        }
+    }
+
+    public void DisplayAllWordCounts()
+    {
+        foreach (string key in _allWordCounts.Keys)
+        {
+            Console.WriteLine($"{key}: Count: {_allWordCounts[key]}");
+        }
     }
 }

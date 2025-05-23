@@ -250,5 +250,18 @@
             "stopAtEntry": false
         },
 
+        {
+            "name": "CSE 210 Test App",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-CSE210TestApp",
+            "program": "${workspaceFolder}/CSE210TestApp/bin/Debug/net8.0/CSE210TestApp.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/CSE210TestApp",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+
     ]
 }
